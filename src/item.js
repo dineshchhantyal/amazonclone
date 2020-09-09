@@ -1,17 +1,18 @@
 import React from 'react';
 import StarsIcon from '@material-ui/icons/Stars';
 import { useStateValue } from './StateProvider';
-function Item({key ,image, rating, price, title}) {
+function Item({outKey ,image, rating, price, title}) {
     const [{basket}, dispatch] = useStateValue();
 
     const del = () =>{
+      console.log("Deleted id",outKey);
+
         dispatch({
             type : 'REMOVE_FROM_BASKET',
-            key,
+            outKey,
             price,
         }
         );
-        console.log("Deleted id",key);
     }
     return (
     
@@ -38,7 +39,7 @@ function Item({key ,image, rating, price, title}) {
             </div>
           </div>
           <div className="remove__btn">
-        <button onClick= {del}>Remove from basket</button>
+        <button  onClick= {del}>Remove from basket</button>
         </div>
         </div>
       </div>

@@ -6,19 +6,20 @@ import { useStateValue } from './StateProvider';
 
 function Product({ id, title, image, price, rating}) {
   const [state, dispatch] = useStateValue();
-  const [key, setkey] =useState();
+  const [checkOutKey, setCheckOutkey] =useState(id);
   const addToBasket = () => {
     dispatch({
       type: 'ADD_TO_BASKET',
       item : {
         id,
+        checkOutKey,
         title,
         image,
         price,
         rating,
       },
     });
-
+    setCheckOutkey(checkOutKey * Math.random()*90000);
   }
   return (
     <div className='product' id={id}>
