@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className="header">
       <img
-        src="https://www.pinclipart.com/picdir/middle/358-3584545_amazon-web-services-logo-png-transparent-svg-vector.png"
+        src="http://pngimg.com/uploads/amazon/amazon_PNG25.png"
         className="header__logo"
       />
       <div className="header__search">
