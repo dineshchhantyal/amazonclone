@@ -5,6 +5,7 @@ import Product from "./Product";
 function Home() {
   return (
     <div className="home">
+     
       <div className="home__container">
         <img src='https://upload.wikimedia.org/wikipedia/commons/e/e7/Animated-Flag-Nepal.gif' style = {{position : 'absolute'}} alt=""/>
         <img

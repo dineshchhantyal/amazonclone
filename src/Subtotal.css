@@ -26,3 +26,17 @@
     border-color:  #a88734 #9c7e31 #856a29;
     color: #111;
 }
+.transval {
+    animation: rot .2s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+@keyframes rot {
+    from {
+        transform: rotateX(0deg);
+    
+    }
+    to {
+        transform: rotateX(360deg);
+        color: rgb(255, 255, 104);
+    }
+}

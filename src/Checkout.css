@@ -25,3 +25,6 @@
   letter-spacing: 2px;
   color: rgb(241, 181, 107);
 }
+.checkoutProduct:nth-child(even) {
+  background: lightgrey;
+}
