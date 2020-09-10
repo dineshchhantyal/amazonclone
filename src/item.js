@@ -5,7 +5,6 @@ function Item({outKey ,image, rating, price, title}) {
     const [{basket}, dispatch] = useStateValue();
 
     const del = () =>{
-      console.log("Deleted id",outKey);
 
         dispatch({
             type : 'REMOVE_FROM_BASKET',
