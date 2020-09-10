@@ -4,6 +4,7 @@ import Subtotal from "./Subtotal";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 
+
 function Checkout() {
   const [{ basket, user }] = useStateValue();
   const firstname = user?user.email.split('@')[0] : "";
@@ -21,7 +22,7 @@ function Checkout() {
         <div>
           <h4 className="user__info">{user? "Hey! " + firstname : ""  }</h4>
           <h3 className="checkout__title"> { basket.length > 0 ? "Your shopping Basket" : "Add To Basket From Our Shop " }  </h3>
-
+          
           {basket.reverse().map(item => (
             <CheckoutProduct
               outKey = {item.checkOutKey}

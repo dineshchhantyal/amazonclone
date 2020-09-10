@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 import { Button } from "@material-ui/core";
 
 function CheckoutProduct({ outKey, id, image, title, price, rating }) {
   const [, dispatch] = useStateValue();
-  const [odd, setOdd] = useState('0');
   
   const del = () => {
     dispatch({

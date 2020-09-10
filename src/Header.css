@@ -2,7 +2,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background: #f8a8a4;
+    background: #EAF4F7;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -24,16 +24,16 @@ input.header__searchInput {
     width: 100%;
 }
 .header__search {
-    display:flex;
-    flex: 1;
+    display: flex;
+    flex: 1 1;
     align-items: center;
     border-radius: 24px;
-    height:max-content;
 }
 .header__searchIcon {
     padding: 5px;
+    width: 2em;
     height: 22px !important;
-    background-color: #ffc881;
+    background-color: #f79438;
 }
 .header__optionLineOne {
     font-size: 10px;
