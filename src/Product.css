@@ -6,7 +6,7 @@
     margin: 10px;
     padding: 20px;
     width: 100%;
-    max-height: 400px;
+    max-height: cover;
     min-width: 100px;
     background-color: white;
     z-index: 1;
@@ -36,6 +36,6 @@
   }
   
   .product__info {
-    height: 100px;
-    margin-bottom: 15px 0px;
+    height: 150px;
+    margin: 15px 0px;
   }

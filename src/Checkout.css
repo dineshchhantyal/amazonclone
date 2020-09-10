@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=PT+Sans&display=swap');
+
 .checkout {
   display: flex;
   padding: 70px;
@@ -14,4 +16,9 @@
   margin-right: 10px;
   padding: 10px;
   border-bottom: 1px solid lightgray;
+}
+.user__info {
+  /* font-family: 'Grandstander', cursive; */
+  font-family: 'PT Sans', sans-serif;
+  color: rgb(241, 181, 107);
 }
