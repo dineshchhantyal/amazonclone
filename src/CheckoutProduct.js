@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
 function CheckoutProduct({ outKey, id, image, title, price, rating }) {
   const [, dispatch] = useStateValue();
-
+  const [odd, setOdd] = useState('0');
+  
   const del = () => {
     dispatch({
       type: "REMOVE_FROM_BASKET",
@@ -13,7 +14,7 @@ function CheckoutProduct({ outKey, id, image, title, price, rating }) {
   };
 
   return (
-    <div className="checkoutProduct" key={outKey}>
+    <div className="checkoutProduct" key={outKey} data-aos="fade-up" data-aos-delay="0s" data-aos-anchor-placement="top-bottom">
       <img className="checkoutProduct__image" src={image} alt={title[6]}/>
 
       <div className="checkoutProduct__info">
@@ -32,7 +33,7 @@ function CheckoutProduct({ outKey, id, image, title, price, rating }) {
           </div>
         </div>
         <div className="checkout__cancel">
-          <button onClick={del}>Remove from Basket</button>
+          <button onClick={del} className="Remover">Remove from Basket</button>
         </div>
       </div>
     </div>

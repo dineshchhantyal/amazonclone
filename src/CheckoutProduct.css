@@ -2,11 +2,11 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
-    cursor: pointer;
-    height: 190px;
-    align-items: center;
+  cursor: pointer;
+  height: 190px;
+  align-items: center;
 }
- 
+
 .checkoutProduct__info {
   padding-left: 20px;
   display: flex;
@@ -21,11 +21,14 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
-
+.checkout__cancel > button:hover {
+ transform: scale(1.2);
+ transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 .checkoutProduct__image {
   object-fit: contain;
   width: 180px;
-  height: 180px;
+  height: 180px;  
 }
 
 .checkoutProduct__rating {

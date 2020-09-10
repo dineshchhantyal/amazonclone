@@ -15,7 +15,7 @@ function Subtotal() {
 
   }, [getBasketTotal(basket)])
   return (
-    <div className="subtotal">
+    <div className="subtotal" data-aos="fade-down" data-aos-anchor-placement="center">
       <CurrencyFormat
         renderText={(value) => (
           <>

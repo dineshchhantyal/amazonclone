@@ -26,5 +26,5 @@
   color: rgb(241, 181, 107);
 }
 .checkoutProduct:nth-child(even) {
-  background: lightgrey;
+  background: rgb(243, 243, 243);
 }

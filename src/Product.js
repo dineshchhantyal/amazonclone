@@ -21,7 +21,7 @@ function Product({ id, title, image, price, rating }) {
   };
 
   return (
-        <div className="product "  key={id}>
+        <div className="product"  key={id} data-aos="flip-up" data-aos-anchor-placement="center">
           {" "}
           <div className="product__info" >
             <p>{title}</p>

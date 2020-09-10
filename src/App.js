@@ -8,10 +8,11 @@ import { auth } from "./firebase";
 import Checkout from "./Checkout";
 import { useStateValue } from "./StateProvider";
 import ScrollToTop from './Scroll';
-
+import AOS from 'aos';
 function App() {
   const [, dispatch] = useStateValue();
-
+  
+  AOS.init();
   useEffect(() => {
     // will only run once when the app component loads...
 

@@ -27,7 +27,7 @@
     color: #111;
 }
 .transval {
-    animation: rot .2s cubic-bezier(0.23, 1, 0.320, 1);
+    animation: rot .422s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
 @keyframes rot {
@@ -37,6 +37,6 @@
     }
     to {
         transform: rotateX(360deg);
-        color: rgb(255, 255, 104);
+        color: rgb(250, 81, 29);
     }
 }
