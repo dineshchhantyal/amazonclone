@@ -7,9 +7,10 @@ import Login from "./Login";
 import { auth } from "./firebase";
 import Checkout from "./Checkout";
 import { useStateValue } from "./StateProvider";
+import ScrollToTop from './Scroll';
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   useEffect(() => {
     // will only run once when the app component loads...
@@ -34,6 +35,8 @@ function App() {
   }, []);
   return (
     <Router>
+          <ScrollToTop>
+
       <div className="App">
         <Switch>
           <Route path="/login">
@@ -43,6 +46,7 @@ function App() {
             <Header />
 
             <Checkout />
+
           </Route>
           <Route path="/" exact>
             <Header />
@@ -51,6 +55,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      </ScrollToTop>
     </Router>
   );
 }

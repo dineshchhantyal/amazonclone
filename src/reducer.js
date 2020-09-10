@@ -1,4 +1,3 @@
-import React from "react";
 export const initialState = {
   basket: [],
   user: null,
@@ -16,7 +15,7 @@ const reducer = (state, action) => {
     case "REMOVE_FROM_BASKET":
       return {
         ...state,
-        basket: state.basket.filter((pk) => pk.checkOutKey != action.outKey),
+        basket: state.basket.filter((pk) => pk.checkOutKey !== action.outKey),
       };
     case "SET_USER":
       return {

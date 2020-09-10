@@ -3,7 +3,7 @@ import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
 
 function CheckoutProduct({ outKey, id, image, title, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const del = () => {
     dispatch({
@@ -14,7 +14,7 @@ function CheckoutProduct({ outKey, id, image, title, price, rating }) {
 
   return (
     <div className="checkoutProduct" key={outKey}>
-      <img className="checkoutProduct__image" src={image} />
+      <img className="checkoutProduct__image" src={image} alt={title[6]}/>
 
       <div className="checkoutProduct__info">
         <div className="chekout__detail">
@@ -27,7 +27,7 @@ function CheckoutProduct({ outKey, id, image, title, price, rating }) {
             {Array(rating)
               .fill()
               .map((_, i) => (
-                <p>🌟</p>
+                <span role="img" aria-label="jsx-a11y/accessible-emoji">🌟</span>
               ))}
           </div>
         </div>
