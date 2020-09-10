@@ -3,7 +3,7 @@
 .checkout {
   display: flex;
   padding: 70px;
-  background-color: white;
+  background-color: #EFF9DA;
   height: max-content;
   justify-content: space-around;
 }
@@ -18,13 +18,12 @@
   border-bottom: 1px solid lightgray;
 }
 .user__info {
-  /* font-family: 'Grandstander', cursive; */
-  font-family:sans-serif;
-  font-weight: 200;
-  font-size: 10px;
+   font-family: 'Grandstander', cursive; 
+  font-weight: 400;
+  font-size: 17px;
   letter-spacing: 2px;
-  color: rgb(241, 181, 107);
+  color: #747377;
 }
 .checkoutProduct:nth-child(even) {
-  background: rgb(243, 243, 243);
+  background: #9155ff;
 }

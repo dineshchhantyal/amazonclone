@@ -8,13 +8,14 @@
   width: 100%;
   max-height: cover;
   min-width: 100px;
-  background-color: white;
+  background-color: #EFF9DA;
   z-index: 1;
   cursor: pointer;
+  border-radius: 12px;
 }
 .product:hover {
-  box-shadow: 4px 8px 8px -8px rgb(161, 160, 160);
-  transform: scale(1.01);
+  box-shadow: 4px 8px 8px -8px #D6CDEA;
+  transform: scale(1.02);
   transition: all 0.01s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .product__rating {
@@ -29,19 +30,20 @@
 }
 
 .product > button {
-  background: #f0c14b;
-  border: 0.3px solid;
+  background: #ccc6d8;
+  border: none;
   cursor: pointer;
   margin-top: 10px;
-  border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  width: 170px;
+  height: 35px;
+  border-radius: 14px;
 }
 .product > button:hover {
   transform: scale(1.23);
-  border-color: #9c7e31 #846a29 #a88734;
   color: rgb(18, 18, 19);
-  border-radius: 2px;
-  transition: tranform 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border-radius: 12px;
+  transition: all 0.2s  cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .product__price {

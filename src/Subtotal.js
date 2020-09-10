@@ -3,6 +3,7 @@ import "./Subtotal.css";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "./StateProvider";
 import { getBasketTotal } from "./reducer";
+import { Button, Checkbox } from "@material-ui/core";
  
 
 
@@ -23,7 +24,10 @@ function Subtotal() {
               Subtotal ({basket.length} items) <p id="val" > <strong>{value < 0 ? 0 : value}</strong> </p>
             </p>
             <small className="subtotal__gift">
-              <input type="checkbox" />
+            <Checkbox
+  value="checkedA"
+  inputProps={{ 'aria-label': 'Checkbox A' }}
+/>
               This order contains a gift
             </small>
           </>
@@ -34,7 +38,7 @@ function Subtotal() {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button> Procced to Checkout </button>
+      <Button> Procced to Checkout </Button>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import Button from '@material-ui/core/Button';
 
 function Product({ id, title, image, price, rating }) {
   const [, dispatch] = useStateValue();
@@ -40,7 +41,7 @@ function Product({ id, title, image, price, rating }) {
             </div>
           </div>
           <img src={image} alt="" />
-          <button onClick={addToBasket}>Add to Basket</button>
+          <Button variant="outlined" onClick={addToBasket}>Add To Basket </Button>
         </div>
   );
 }

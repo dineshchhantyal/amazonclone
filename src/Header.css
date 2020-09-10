@@ -2,7 +2,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background: #131921;
+    background: #f8a8a4;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -33,7 +33,7 @@ input.header__searchInput {
 .header__searchIcon {
     padding: 5px;
     height: 22px !important;
-    background-color: #cd9042;
+    background-color: #ffc881;
 }
 .header__optionLineOne {
     font-size: 10px;
@@ -51,13 +51,11 @@ font-weight: 800;
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
-    color: white;
 }
 
 .header__optionBasket {
     display: flex;
     align-items: center;
-    color: white;
 }
 
 .header__basketCount {

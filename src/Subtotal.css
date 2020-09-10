@@ -8,6 +8,7 @@
     background-color: #f3f3f3;
     border: 1px solid #dddddd;
     border-radius: 3px;
+    border-radius:17px ;
 }
 .subtotal__gift {
     display: flex;
@@ -21,10 +22,9 @@
     border-radius: 2px;
     width: 100%;
     height: 30px;
-    border: 1px solid;
     margin-top: 10px;
-    border-color:  #a88734 #9c7e31 #856a29;
     color: #111;
+    border-radius: 12px;
 }
 .transval {
     animation: rot .422s cubic-bezier(0.23, 1, 0.320, 1);
