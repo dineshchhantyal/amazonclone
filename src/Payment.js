@@ -8,6 +8,7 @@ import CurrencyFormat from "react-currency-format";
 import { getBasketTotal } from "./reducer";
 import axios from "./axios";
 import { db } from "./firebase";
+import { Button } from "@material-ui/core";
 
 function Payment() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -36,8 +37,6 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
-  console.log("👱", user);
-
   const handleSubmit = async (event) => {
         // do all the fancy stripe stuff...
         event.preventDefault();
@@ -63,10 +62,11 @@ function Payment() {
 
             setSucceeded(true);
             setError(null)
-            setProcessing(false)
+            setProcessing(true)
 
             dispatch({
                 type: 'EMPTY_BASKET'
+
             })
 
             history.replace('/orders')
@@ -128,9 +128,9 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <Button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
-                </button>
+                </Button>
               </div>
 
               {/* Errors */}
