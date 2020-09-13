@@ -33,46 +33,43 @@ function Payment() {
       });
       setClientSecret(response.data.clientSecret);
     };
-
     getClientSecret();
   }, [basket]);
 
   const handleSubmit = async (event) => {
-        // do all the fancy stripe stuff...
-        event.preventDefault();
+    // do all the fancy stripe stuff...
+    event.preventDefault();
+    setProcessing(true);
+
+    const payload = await stripe
+      .confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: elements.getElement(CardElement),
+        },
+      })
+      .then(({ paymentIntent }) => {
+        // paymentIntent = payment confirmation
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
+        setSucceeded(true);
+        setError(null);
         setProcessing(true);
 
-        const payload = await stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: elements.getElement(CardElement)
-            }
-        }).then(({ paymentIntent }) => {
-            // paymentIntent = payment confirmation
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
 
-            db
-              .collection('users')
-              .doc(user?.uid)
-              .collection('orders')
-              .doc(paymentIntent.id)
-              .set({
-                  basket: basket,
-                  amount: paymentIntent.amount,
-                  created: paymentIntent.created
-              })
-
-            setSucceeded(true);
-            setError(null)
-            setProcessing(true)
-
-            dispatch({
-                type: 'EMPTY_BASKET'
-
-            })
-
-            history.replace('/orders')
-        })
-
-    }
+        history.replace("/orders");
+      });
+  };
   const handleChange = (event) => {
     // Listen for changes in the CardElement
     // and display any errors as the customer types their card details
@@ -102,6 +99,7 @@ function Payment() {
           <div className="payment__items">
             {basket.map((item) => (
               <CheckoutProduct
+                outKey={item.checkOutKey}
                 id={item.id}
                 title={item.title}
                 image={item.image}
@@ -128,7 +126,10 @@ function Payment() {
                   thousandSeparator={true}
                   prefix={"$"}
                 />
-                <Button disabled={processing || disabled || succeeded}>
+                <Button
+                  onClick={handleSubmit}
+                  disabled={processing || disabled || succeeded}
+                >
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </Button>
               </div>

@@ -14,7 +14,7 @@ function CheckoutProduct({ outKey, id, image, title, price, rating }) {
   };
 
   return (
-    <div className="checkoutProduct" key={outKey} data-aos="fade-up" data-aos-delay="0s" data-aos-anchor-placement="top-bottom">
+    <div className="checkoutProduct" key={outKey} data-aos="fade-up" data-aos-delay="0s" data-aos-anchor-placement="top-bottom" title= {title}>
       <img className="checkoutProduct__image" src={image} alt={title[6]}/>
 
       <div className="checkoutProduct__info">
