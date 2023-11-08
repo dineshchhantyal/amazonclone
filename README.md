@@ -1,7 +1,7 @@
 
 ## Test
 
-Hosted at [https://clone-82d90.web.app/](firebase)
+Hosted at [https://clone-82d90.web.app/](https://clone-82d90.web.app/)
 
 ## Run Locally
  - Clone the repo.
