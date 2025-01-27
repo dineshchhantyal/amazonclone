@@ -1,12 +1,12 @@
 import React from "react";
 import "./Home.css";
 import Product from "./Product";
-
+import Dialog from "./components/Dialog";
 
 function Home() {
   return (
     <div className="home">
-     
+      <Dialog />
       <div className="home__container">
         <img src='https://upload.wikimedia.org/wikipedia/commons/e/e7/Animated-Flag-Nepal.gif' style = {{position : 'absolute'}} alt=""/>
         <img
